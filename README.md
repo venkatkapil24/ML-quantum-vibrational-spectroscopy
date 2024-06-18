@@ -38,7 +38,8 @@ mace_run_train \
     --seed=123 \
     --restart_latest \
     --save_cpu \
-    --compute_polarizability```
+    --compute_polarizability
+```
 
 ## References
 
