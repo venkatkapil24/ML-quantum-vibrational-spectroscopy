@@ -1,4 +1,4 @@
-# MACE Model for Bulk Water
+# MACE dielectric response Model for bulk water
 
 A MACE model developed in [Ref. 1](#1) predicts the dipole moment, polarization, and their real space derivatives of bulk water. The dataset is taken from [Ref. 2](#2).
 
