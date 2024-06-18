@@ -11,8 +11,8 @@ The following CLI command was used:
 ```sh
 mace_run_train \
     --name="MACE_dipole_pol" \
-    --train_file="train.xyz" \
-    --test_dir="test.xyz" \
+    --train_file="_INSERT_" \
+    --test_file="_INSERT_" \
     --model="AtomicDipolesMACE" \
     --E0s="average" \
     --num_channels=32 \
@@ -39,6 +39,30 @@ mace_run_train \
     --restart_latest \
     --save_cpu \
     --compute_polarizability
+```
+## Evaluating the model 
+
+Use the following CLI command to evaluate the dipole moment and the polarization:
+
+```sh
+mace_eval_mu_alpha \
+  --configs="_INSERT_ \
+  --model="MACE_dipole_pol.model" \
+  --output="_INSERT_" \
+  --device=cuda \
+  --batch_size=10 \
+```
+
+Use the additional flag if you also want to estimate the spatial derivatives of the dipole moment and the polarization:
+
+```sh
+mace_eval_mu_alpha \
+  --configs="_INSERT_ \
+  --model="MACE_dipole_pol.model" \
+  --output="_INSERT_" \
+  --device=cuda \
+  --batch_size=10 \
+  --compute_dielectric_derivatives \
 ```
 
 ## References
